@@ -36,6 +36,9 @@ function generandoExcusas() {
 }
 
 window.onload = function() {
-  document.getElementById("excuse").innerHTML = generandoExcusas();
-  console.log(generandoExcusas());
+  document
+    .getElementById("botonGeneradorExcusas")
+    .addEventListener("click", function() {
+      document.getElementById("excuse").innerHTML = generandoExcusas();
+    });
 };
