@@ -5,33 +5,32 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-function random1(longitudArray) {
-  let randomQuien = Math.floor(Math.random() * longitudArray);
-  return randomQuien;
+function obtenerExcusaAleatoria(longitudArray) {
+  return Math.floor(Math.random() * longitudArray);
 }
 
 function generandoExcusas() {
-  const generaQuien = ["El perro ", "Mi abuela ", "El cartero ", "Mi Gato "];
-  const generaAccion = ["comió ", "arañó ", "perdió ", "rompió "];
-  const generaQue = ["mi trabajo ", "mi telefono ", "mi coche "];
-  const generaCuando = [
-    "despues de clase",
+  const GENERAQUIEN = ["El perro ", "Mi abuela ", "El cartero ", "Mi gato "];
+  const GENERAACCION = ["comió ", "arañó ", "perdió ", "rompió "];
+  const GENERAQUE = ["mi trabajo ", "mi telefono ", "mi coche "];
+  const GENERACUANDO = [
+    "después de clase",
     "cuando estoy durmiendo",
     "mientras estoy durmiendo",
     "durante mi comida",
     "mientras estoy jugando"
   ];
 
-  const indiceQuien = random1(generaQuien.length);
-  const indiceAccion = random1(generaAccion.length);
-  const indiceQue = random1(generaQue.length);
-  const indiceCuando = random1(generaCuando.length);
+  const INDICEQUIEN = obtenerExcusaAleatoria(GENERAQUIEN.length);
+  const INDICEACCION = obtenerExcusaAleatoria(GENERAACCION.length);
+  const INDICEQUE = obtenerExcusaAleatoria(GENERAQUE.length);
+  const INDICECUANDO = obtenerExcusaAleatoria(GENERACUANDO.length);
 
   return (
-    generaQuien[indiceQuien] +
-    generaAccion[indiceAccion] +
-    generaQue[indiceQue] +
-    generaCuando[indiceCuando]
+    GENERAQUIEN[INDICEQUIEN] +
+    GENERAACCION[INDICEACCION] +
+    GENERAQUE[INDICEQUE] +
+    GENERACUANDO[INDICECUANDO]
   );
 }
 
